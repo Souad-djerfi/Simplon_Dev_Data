@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="fr">
+
+<head>
+    <meta charset="utf-8" />
+	<title>DIRECTEUR</title>
+    <link href="style/style.css"  rel="stylesheet" type="text/css">
+        
+</head>
+
+
+<body>
+    <h1>Liste des films produit par : {{nom }}</h1>
+    <table>
+
+		<tr>
+			<th>Titre</th>
+		</tr>
+		
+		{% for i in films_dir.index: %}
+        <tr>
+            <td>{{ films_dir.iloc[i]['title'] }}</td>
+        </tr>
+		{% endfor %}
+       
+    </table>
+	<h2>Liste des catégories des films produits par : {{nom }}</h2>
+	<img src="cat.png" alt="Categorie" height="400" width="470"/>
+	
+	<footer> 
+	{{ time_stamp }}
+	</footer> 
+
+</body>
+</html>
+
+
